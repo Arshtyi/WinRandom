@@ -1,9 +1,3 @@
-#ifdef __GNUC__
-#define BCRYPT_SUCCESS(Status) (((NTSTATUS)(Status)) >= 0)
-#ifndef STATUS_SUCCESS
-#define STATUS_SUCCESS ((NTSTATUS)0x00000000L)
-#endif
-#endif
 #include "WinRandom.h"
 #include <stdexcept>
 #include <string>

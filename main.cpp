@@ -50,11 +50,12 @@ int main()
 {
     try
     {
-        std::cout << "Windows 加密随机数生成器演示程序" << std::endl;
-        std::cout << "=============================" << std::endl;
+        std::cout << "Windows 加密随机数生成器Demo" << std::endl;
+        std::cout << std::string(60, '=') << std::endl;
 
         WinRandom rng;
-
+        std::cout << "按Enter键继续..." << std::endl;
+        std::cin.get();
         // 演示生成随机整数
         PrintRandomIntegers(rng, 20, 1, 100);
 
@@ -68,10 +69,14 @@ int main()
         PrintRandomBytes(rng, 64);
 
         std::cout << "随机数生成完成!" << std::endl;
+        std::cout << "按Enter键继续..." << std::endl;
+        std::cin.get();
     }
     catch (const std::exception &e)
     {
         std::cerr << "错误: " << e.what() << std::endl;
+        std::cout << "按Enter键继续..." << std::endl;
+        std::cin.get();
         return 1;
     }
 
